@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "algoliasearch": "^4.11.0",
@@ -19,6 +20,8 @@
     "@types/react": "^17.0.37",
     "eslint": "8.4.0",
     "eslint-config-next": "12.0.7",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "typescript": "^4.5.2"
   }
 }
