@@ -19,7 +19,7 @@ index 8ab5219..97556be 100644
      children?: React.ReactNode;
  };
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/InstantSearch.js b/node_modules/react-instantsearch-hooks/dist/es/InstantSearch.js
-index 40ea976..bf4f1f7 100644
+index 40ea976..7d34e80 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/InstantSearch.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/InstantSearch.js
 @@ -1,9 +1,9 @@
@@ -56,7 +56,7 @@ index 394106e..61c04cb 100644
      children?: React.ReactNode;
  };
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/SearchIndex.js b/node_modules/react-instantsearch-hooks/dist/es/SearchIndex.js
-index 5112147..421ec8a 100644
+index 5112147..3ef8253 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/SearchIndex.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/SearchIndex.js
 @@ -1,8 +1,8 @@
@@ -135,7 +135,7 @@ index 7b794fc..bb1e0e2 100644
  export declare type UseConfigureProps = ConfigureConnectorParams['searchParameters'];
  export declare function useConfigure(props: UseConfigureProps): import("instantsearch.js/es/connectors/configure/connectConfigure").ConfigureRenderState;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useConfigure.js b/node_modules/react-instantsearch-hooks/dist/es/useConfigure.js
-index c0a567f..e83c64c 100644
+index c0a567f..98d6e56 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useConfigure.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useConfigure.js
 @@ -1,5 +1,5 @@
@@ -155,7 +155,7 @@ index 58bb0d4..393fc86 100644
 +import type { Connector, WidgetDescription } from 'instantsearch.js/es/index.js';
  export declare function useConnector<TProps extends Record<string, unknown>, TDescription extends WidgetDescription>(connector: Connector<TDescription, TProps>, props?: TProps): TDescription['renderState'];
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useConnector.js b/node_modules/react-instantsearch-hooks/dist/es/useConnector.js
-index 1ca8d93..4eb4c25 100644
+index 1ca8d93..d39ecc2 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useConnector.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useConnector.js
 @@ -9,10 +9,10 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
@@ -183,7 +183,7 @@ index 3a431d4..1d3c1f7 100644
  export declare type UseHierarchicalMenuProps = HierarchicalMenuConnectorParams;
  export declare function useHierarchicalMenu(props: UseHierarchicalMenuProps): import("instantsearch.js/es/connectors/hierarchical-menu/connectHierarchicalMenu").HierarchicalMenuRenderState;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useHierarchicalMenu.js b/node_modules/react-instantsearch-hooks/dist/es/useHierarchicalMenu.js
-index 33e7b2d..39c4ecb 100644
+index 33e7b2d..05095b9 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useHierarchicalMenu.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useHierarchicalMenu.js
 @@ -1,5 +1,5 @@
@@ -194,6 +194,7 @@ index 33e7b2d..39c4ecb 100644
  export function useHierarchicalMenu(props) {
    return useConnector(connectHierarchicalMenu, props);
  }
+\ No newline at end of file
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useHits.d.ts b/node_modules/react-instantsearch-hooks/dist/es/useHits.d.ts
 index 98cd5d0..4d8077d 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useHits.d.ts
@@ -204,7 +205,7 @@ index 98cd5d0..4d8077d 100644
  export declare type UseHitsProps = HitsConnectorParams;
  export declare function useHits(props?: UseHitsProps): import("instantsearch.js/es/connectors/hits/connectHits").HitsRenderState;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useHits.js b/node_modules/react-instantsearch-hooks/dist/es/useHits.js
-index a3a9128..3c0c79c 100644
+index a3a9128..671788f 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useHits.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useHits.js
 @@ -1,5 +1,5 @@
@@ -215,6 +216,7 @@ index a3a9128..3c0c79c 100644
  export function useHits(props) {
    return useConnector(connectHits, props);
  }
+\ No newline at end of file
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useIndex.d.ts b/node_modules/react-instantsearch-hooks/dist/es/useIndex.d.ts
 index 377579e..c8b6622 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useIndex.d.ts
@@ -225,7 +227,7 @@ index 377579e..c8b6622 100644
  export declare type UseIndexProps = IndexWidgetParams;
  export declare function useIndex(props: UseIndexProps): import("instantsearch.js/es/widgets/index/index").IndexWidget;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useIndex.js b/node_modules/react-instantsearch-hooks/dist/es/useIndex.js
-index 0eee47e..18e42d7 100644
+index 0eee47e..650888f 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useIndex.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useIndex.js
 @@ -1,8 +1,8 @@
@@ -242,7 +244,7 @@ index 0eee47e..18e42d7 100644
    var parentIndex = useIndexContext();
    var stableProps = useStableValue(props);
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useIndexContext.js b/node_modules/react-instantsearch-hooks/dist/es/useIndexContext.js
-index bb0f5dc..676b7cd 100644
+index bb0f5dc..f34fab6 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useIndexContext.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useIndexContext.js
 @@ -1,5 +1,5 @@
@@ -263,7 +265,7 @@ index fb839a9..f9a9354 100644
      /**
       * Removes the console warning about the experimental version.
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useInstantSearch.js b/node_modules/react-instantsearch-hooks/dist/es/useInstantSearch.js
-index 379b2a8..4fe02a6 100644
+index 379b2a8..f248a57 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useInstantSearch.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useInstantSearch.js
 @@ -1,11 +1,11 @@
@@ -284,7 +286,7 @@ index 379b2a8..4fe02a6 100644
    var _ref$suppressExperime = _ref.suppressExperimentalWarning,
        suppressExperimentalWarning = _ref$suppressExperime === void 0 ? false : _ref$suppressExperime,
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useInstantSearchContext.js b/node_modules/react-instantsearch-hooks/dist/es/useInstantSearchContext.js
-index 765e0ad..c8fc193 100644
+index 765e0ad..29648fa 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useInstantSearchContext.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useInstantSearchContext.js
 @@ -1,5 +1,5 @@
@@ -304,7 +306,7 @@ index d644fb8..d016640 100644
  export declare type UsePaginationProps = PaginationConnectorParams;
  export declare function usePagination(props?: UsePaginationProps): import("instantsearch.js/es/connectors/pagination/connectPagination").PaginationRenderState;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/usePagination.js b/node_modules/react-instantsearch-hooks/dist/es/usePagination.js
-index 41634de..db6df65 100644
+index 41634de..3277482 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/usePagination.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/usePagination.js
 @@ -1,5 +1,5 @@
@@ -315,6 +317,7 @@ index 41634de..db6df65 100644
  export function usePagination(props) {
    return useConnector(connectPagination, props);
  }
+\ No newline at end of file
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useRefinementList.d.ts b/node_modules/react-instantsearch-hooks/dist/es/useRefinementList.d.ts
 index c26b41e..def8058 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useRefinementList.d.ts
@@ -325,7 +328,7 @@ index c26b41e..def8058 100644
  export declare type UseRefinementListProps = RefinementListConnectorParams;
  export declare function useRefinementList(props: UseRefinementListProps): import("instantsearch.js/es/connectors/refinement-list/connectRefinementList").RefinementListRenderState;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useRefinementList.js b/node_modules/react-instantsearch-hooks/dist/es/useRefinementList.js
-index fff00c4..0c8bb17 100644
+index fff00c4..f51e8ad 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useRefinementList.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useRefinementList.js
 @@ -1,5 +1,5 @@
@@ -336,6 +339,7 @@ index fff00c4..0c8bb17 100644
  export function useRefinementList(props) {
    return useConnector(connectRefinementList, props);
  }
+\ No newline at end of file
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useSearchBox.d.ts b/node_modules/react-instantsearch-hooks/dist/es/useSearchBox.d.ts
 index aa5d805..20acdcd 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useSearchBox.d.ts
@@ -346,7 +350,7 @@ index aa5d805..20acdcd 100644
  export declare type UseSearchBoxProps = SearchBoxConnectorParams;
  export declare function useSearchBox(props?: UseSearchBoxProps): import("instantsearch.js/es/connectors/search-box/connectSearchBox").SearchBoxRenderState;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useSearchBox.js b/node_modules/react-instantsearch-hooks/dist/es/useSearchBox.js
-index ef3092d..9cf19bb 100644
+index ef3092d..bfe7331 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useSearchBox.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useSearchBox.js
 @@ -1,5 +1,5 @@
@@ -357,6 +361,7 @@ index ef3092d..9cf19bb 100644
  export function useSearchBox(props) {
    return useConnector(connectSearchBox, props);
  }
+\ No newline at end of file
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useSortBy.d.ts b/node_modules/react-instantsearch-hooks/dist/es/useSortBy.d.ts
 index 9696880..ee621a3 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useSortBy.d.ts
@@ -367,7 +372,7 @@ index 9696880..ee621a3 100644
  export declare type UseSortByProps = SortByConnectorParams;
  export declare function useSortBy(props: UseSortByProps): import("instantsearch.js/es/connectors/sort-by/connectSortBy").SortByRenderState;
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/useSortBy.js b/node_modules/react-instantsearch-hooks/dist/es/useSortBy.js
-index 3950b02..c5d3574 100644
+index 3950b02..612c0b7 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/useSortBy.js
 +++ b/node_modules/react-instantsearch-hooks/dist/es/useSortBy.js
 @@ -1,5 +1,5 @@
@@ -378,6 +383,7 @@ index 3950b02..c5d3574 100644
  export function useSortBy(props) {
    return useConnector(connectSortBy, props);
  }
+\ No newline at end of file
 diff --git a/node_modules/react-instantsearch-hooks/dist/es/utils/index.d.ts b/node_modules/react-instantsearch-hooks/dist/es/utils/index.d.ts
 index 8b8559b..14dc7e4 100644
 --- a/node_modules/react-instantsearch-hooks/dist/es/utils/index.d.ts
@@ -402,16 +408,16 @@ index a300431..14dc7e4 100644
 +export * from './noop.js';
 +export * from './warn.js';
 diff --git a/node_modules/react-instantsearch-hooks/package.json b/node_modules/react-instantsearch-hooks/package.json
-index 4655323..f612988 100644
+index 4655323..d9395d5 100644
 --- a/node_modules/react-instantsearch-hooks/package.json
 +++ b/node_modules/react-instantsearch-hooks/package.json
-@@ -4,8 +4,13 @@
+@@ -4,8 +4,15 @@
    "description": "⚡ Lightning-fast search for React, by Algolia",
    "source": "src/index.ts",
    "types": "dist/es/index.d.ts",
--  "main": "dist/cjs/index.js",
--  "module": "dist/es/index.js",
 +  "type": "module",
+   "main": "dist/cjs/index.js",
+   "module": "dist/es/index.js",
 +  "exports": {
 +    ".": {
 +      "import": "./dist/es/index.js",
