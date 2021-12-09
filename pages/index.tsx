@@ -1,9 +1,15 @@
 import algoliasearch from 'algoliasearch/lite';
 import { Hit as AlgoliaHit } from '@algolia/client-search';
-import { InstantSearch } from 'react-instantsearch-hooks';
+import {
+  InstantSearch,
+  InstantSearchServerState,
+  InstantSearchSSRProvider,
+} from 'react-instantsearch-hooks';
+import { getServerState } from 'react-instantsearch-hooks-server';
 import { Highlight } from '../components/Highlight';
 import { Hits } from '../components/Hits';
 import { SearchBox } from '../components/SearchBox';
+import { history } from 'instantsearch.js/es/lib/routers/index.js';
 
 const client = algoliasearch('latency', '6be0576ff61c053d5f9a3225e2a90f76');
 
@@ -23,11 +29,43 @@ function Hit({ hit }: HitProps) {
   );
 }
 
-export default function Home() {
+export default function Home({
+  serverState,
+  url,
+}: {
+  serverState?: InstantSearchServerState;
+  url?: string;
+}) {
   return (
-    <InstantSearch searchClient={client} indexName="instant_search">
-      <SearchBox />
-      <Hits hitComponent={Hit} />
-    </InstantSearch>
+    <InstantSearchSSRProvider {...serverState}>
+      <InstantSearch
+        searchClient={client}
+        indexName="instant_search"
+        routing={{
+          router: history({
+            getLocation() {
+              if (typeof window === 'undefined') {
+                return new URL(url, 'https://example.com') as unknown as Location;
+              }
+
+              return window.location;
+            },
+          }),
+        }}
+      >
+        <SearchBox />
+        <Hits hitComponent={Hit} />
+      </InstantSearch>
+    </InstantSearchSSRProvider>
   );
+}
+
+export async function getServerSideProps({ req }) {
+  const serverState = await getServerState(<Home url={req.url} />);
+  return {
+    props: {
+      serverState,
+      url: req.url,
+    },
+  };
 }

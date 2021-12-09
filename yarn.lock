@@ -1786,10 +1786,9 @@ instantsearch.css@^7.4.5:
   resolved "https://registry.yarnpkg.com/instantsearch.css/-/instantsearch.css-7.4.5.tgz#2a521aa634329bf1680f79adf87c79d67669ec8d"
   integrity sha512-iIGBYjCokU93DDB8kbeztKtlu4qVEyTg1xvS6iSO1YvqRwkIZgf0tmsl/GytsLdZhuw8j4wEaeYsCzNbeJ/zEQ==
 
-instantsearch.js@^4.32.0:
-  version "4.33.2"
-  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-4.33.2.tgz#d3e75bc6bb5bb40c68c36e0a159649969e5a113f"
-  integrity sha512-klQdP6G0wokCPuCyjsar3xPLZGKg+r3eUlW2vKZ6NBi8Ke9pC22ewjVNaJ6revWP/RsXxDMgTWfQKnYHRBddEg==
+instantsearch.js@^4.34.0, "instantsearch.js@https://pkg.csb.dev/algolia/instantsearch.js/commit/153fe94e/instantsearch.js":
+  version "4.34.0"
+  resolved "https://pkg.csb.dev/algolia/instantsearch.js/commit/153fe94e/instantsearch.js#72b2a2b7a6430cd1a2ed7706ce7c6d89300cfa8b"
   dependencies:
     "@types/google.maps" "^3.45.3"
     "@types/hogan.js" "^3.0.0"
@@ -2679,15 +2678,22 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-instantsearch-hooks@^6.16.0:
-  version "6.16.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-hooks/-/react-instantsearch-hooks-6.16.0.tgz#f6dd889ffd5415dff735d3f324ad0f56bea3e038"
-  integrity sha512-iTxlGNKSuCSdXXhLdK+SyB+TurtlpsiAA4sG+SjGuaeJf4qjE7UQdlkz81jREkhKpZtPu64YBGqU4GmTiA+iGw==
+react-instantsearch-hooks-server@^6.17.0, "react-instantsearch-hooks-server@https://pkg.csb.dev/algolia/react-instantsearch/commit/3ea52896/react-instantsearch-hooks-server":
+  version "6.17.0"
+  resolved "https://pkg.csb.dev/algolia/react-instantsearch/commit/3ea52896/react-instantsearch-hooks-server#4e9972b85a95503d7a70f25f0636b6452182e611"
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    instantsearch.js "^4.34.0"
+    react-instantsearch-hooks "https://pkg.csb.dev/algolia/react-instantsearch/commit/3ea52896/react-instantsearch-hooks"
+
+react-instantsearch-hooks@^6.17.0, "react-instantsearch-hooks@https://pkg.csb.dev/algolia/react-instantsearch/commit/3ea52896/react-instantsearch-hooks":
+  version "6.17.0"
+  resolved "https://pkg.csb.dev/algolia/react-instantsearch/commit/3ea52896/react-instantsearch-hooks#ff79e0a7a95e4e7071f0c95c4bbaed53dfd556ea"
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch-helper "^3.6.2"
     dequal "^2.0.0"
-    instantsearch.js "^4.32.0"
+    instantsearch.js "^4.34.0"
 
 react-is@17.0.2:
   version "17.0.2"
